@@ -1,0 +1,24 @@
+body {
+  font-family: 'Noto Sans', Arial, sans-serif;
+}
+a, img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+
+// Общие стили выше
