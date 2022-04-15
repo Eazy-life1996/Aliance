@@ -1,7 +1,261 @@
 .header {
-  width: 1920px;
-  background-image: url(../../image/bg.jpg);
+  margin: 0 auto;
+  max-width: 450px;
+  background-image: url(../../image/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
+}
+
+.header__desktop {
+  display: none;
+}
+
+.header__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header__nav {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+.active-open {
+  display: none;
+}
+
+.active-close {
+  margin-left: 33%;
+  display: block;
+}
+
+.active {
+  //For JS
+  display: block;
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: $white;
+  padding-top: 30px;
+}
+
+.header__list {
+  padding-left: 15px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $border-second;
+}
+
+.header__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header__inner-link {
+  color: $grey;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+
+  &:hover {
+    color: $grey-second;
+  }
+}
+
+.header__link,
+.header__item {
+  color: $grey-second;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.header__link:hover {
+  color: $grey;
+}
+
+.header__inner-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.header__inner-item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header__mobile-block {
+  padding-left: 15px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.header__mobile-link {
+  color: $grey-second;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  text-decoration-line: underline;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.header__p {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: $grey-second;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.header__p img {
+  margin-right: 10px;
+}
+
+.header__mobile-social {
+  width: 63px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__social-link:hover path {
+  stroke: $grey-second;
+  fill: $grey-second;
+}
+
+.header__mobile {
+  width: 21.3%;
+}
+
+.header__btn-burger {
+  width: 21.3%;
+  height: 68px;
+  border-bottom: 1px solid $border;
+  border-right: 1px solid $border;
+}
+
+.active-btn {
+  //For JS
+  background-color: $white;
+  border-bottom: 1px solid $border-second;
+  border-right: 1px solid $border-second;
+}
+
+.header__logo {
+  width: 57.4%;
+  border-bottom: 1px solid $border;
+  height: 68px;
+}
+
+.header__logo:hover .header__path {
+  fill: $black;
+}
+
+.active-logo {
+  //For JS
+  background-color: $white;
+  border-bottom: 1px solid $border-second;
+}
+
+.active-logo .header__path {
+  //For JS
+  fill: $black;
+}
+
+.active-logo:hover .header__path {
+  //For JS
+  fill: $blue;
+}
+
+.header__logo svg {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.header__phone-mobile {
+  width: 100%;
+  height: 68px;
+  background-color: $blue;
+
+  &:hover {
+    background-color: $black;
+  }
+}
+
+.header__phone-mobile img {
+  width: 24px;
+  margin: 0 auto;
+  padding-top: 26%;
+}
+
+// Вторая часть хэдера
+
+.header__block-second {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header__title {
+  color: $white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 120%;
+}
+
+.header__decoration {
+  display: inline-block;
+  width: 28.6%;
+  height: 2px;
+  background-color: $blue;
+}
+
+.header__description {
+  color: $white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.header__btn-link {
+  width: 100%;
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  &:hover {
+    background-color: $black;
+  }
 }
