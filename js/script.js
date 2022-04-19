@@ -13,3 +13,20 @@ menuBtn.addEventListener("click", function () {
   menuBtn.classList.toggle("active-btn");
   menuLogo.classList.toggle("active-logo");
 });
+
+$(document).ready(function () {
+  $('.header__box').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: false,
+    slidesToShow: 1.5,
+    slidesToScroll: 1,
+    responsive: [
+        {
+          breakpoint: 768,
+          settings: "unslick"
+        }
+      ]
+  });
+});

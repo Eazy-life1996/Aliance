@@ -1,7 +1,7 @@
 .header {
   margin: 0 auto;
   max-width: 450px;
-  background-image: url(../../image/bg-mobile.jpg);
+  background-image: url(../image/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -44,6 +44,7 @@
   width: 100%;
   background-color: $white;
   padding-top: 30px;
+  z-index: 10;
 }
 
 .header__list {
@@ -207,13 +208,14 @@
 .header__phone-mobile img {
   width: 24px;
   margin: 0 auto;
-  padding-top: 26%;
+  padding-top: 23px;
 }
 
 // Вторая часть хэдера
 
 .header__block-second {
   padding-top: 15px;
+  padding-bottom: 50px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -228,7 +230,7 @@
 
 .header__decoration {
   display: inline-block;
-  width: 28.6%;
+  width: 29.6%;
   height: 2px;
   background-color: $blue;
 }
@@ -257,5 +259,231 @@
   margin-bottom: 50px;
   &:hover {
     background-color: $black;
+  }
+}
+.header__box {
+  display: flex;
+  position: relative;
+}
+
+.header__box-item {
+  width: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid $border;
+}
+
+.header__p {
+  color: $white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.header__box .slick-arrow {
+  position: absolute;
+  font-size: 0;
+  background-image: url(../image/arrow.svg);
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 24px;
+  top: 110%;
+}
+
+.header__box .slick-prev {
+  left: 20%;
+  padding-right: 30%;
+  border-right: 1px solid $border;
+}
+
+.header__box .slick-next {
+  transform: rotate(180deg);
+  padding-left: 30%;
+  right: 20%;
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    max-width: 100%;
+    background-image: url(../image/bg.jpg);
+  }
+
+  .header__block {
+    border-bottom: 1px solid $border;
+  }
+
+  .header__btn-burger,
+  .header__mobile,
+  .header__mobile-block {
+    display: none;
+  }
+
+  .header__desktop {
+    width: 27.3%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header__nav {
+    padding-left: 2.6%;
+    width: 60.3%;
+    display: block;
+  }
+
+  .header__inner-list {
+    display: none;
+  }
+
+  .header__link,
+  .header__item {
+    cursor: pointer;
+    color: $white;
+    margin: 0;
+    margin-right: 2.6%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .header__item {
+    padding-bottom: 34px;
+    padding-top: 32px;
+  }
+
+  .header__inner-link:hover {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  .header__item-show:hover {
+    border-bottom: 2px solid $blue;
+  }
+
+  .header__item-show:hover .header__inner-list {
+    display: block;
+    background-color: $white;
+    color: $grey-second;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 76px;
+  }
+
+  .header__list {
+    position: relative;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    border: none;
+  }
+
+  .header__logo {
+    height: 94px;
+    width: 12.5%;
+    border-bottom: none;
+    border-right: 1px solid $border;
+  }
+
+  .header__logo svg {
+    margin-top: 33px;
+  }
+
+  .header__phone-desktop {
+    width: 50%;
+    color: $white;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .header__button {
+    width: 50%;
+    background-color: $blue;
+    color: $white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    padding-left: 2.6%;
+    padding-right: 2.6%;
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+
+  .header__phone-desktop img {
+    margin-right: 10px;
+  }
+
+  .header__block-second {
+    padding-top: 150px;
+    padding-right: 12.5%;
+    padding-left: 12.5%;
+    padding-bottom: 0;
+  }
+
+  .header__btn-link {
+    margin-top: 50px;
+    width: 16.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .header__decoration {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+
+  .header__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 80px;
+  }
+
+  .header__description {
+    margin-top: 30px;
+    font-size: 16px;
+    padding-right: 50%;
+  }
+
+  .header__box {
+    margin-top: 100px;
+  }
+
+  .header__box-item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 16px;
+    width: 100%;
+    border-right: none;
+    &:last-child {
+      border-right: 1px solid $border;
+    }
   }
 }
