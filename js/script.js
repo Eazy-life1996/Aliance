@@ -30,3 +30,20 @@ $(document).ready(function () {
       ]
   });
 });
+
+$(document).ready(function () {
+  $('.work__list').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: false,
+    slidesToShow: 1.2,
+    slidesToScroll: 1,
+    responsive: [
+        {
+          breakpoint: 768,
+          settings: "unslick"
+        }
+      ]
+  });
+});

@@ -125,9 +125,12 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 160%;
-  color: $grey-second;
   margin-bottom: 10px;
   margin-top: 20px;
+}
+
+.header__mobile-block .header__p {
+  color: $grey-second;
 }
 
 .header__p img {
@@ -224,8 +227,11 @@
   color: $white;
   font-style: normal;
   font-weight: 400;
-  font-size: 45px;
+  font-size: 40px;
   line-height: 120%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
 .header__decoration {
@@ -262,7 +268,6 @@
   }
 }
 .header__box {
-  display: flex;
   position: relative;
 }
 
@@ -401,7 +406,7 @@
   }
 
   .header__logo svg {
-    margin-top: 33px;
+    margin-top: 30px;
   }
 
   .header__phone-desktop {
@@ -420,6 +425,7 @@
   }
 
   .header__button {
+    height: 94px;
     width: 50%;
     background-color: $blue;
     color: $white;
@@ -427,8 +433,8 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 160%;
-    padding-top: 34px;
-    padding-bottom: 34px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 2.6%;
     padding-right: 2.6%;
 
@@ -461,8 +467,7 @@
   }
 
   .header__title {
-    display: flex;
-    flex-direction: column;
+    margin-top: 0;
     font-size: 80px;
   }
 
@@ -473,6 +478,7 @@
   }
 
   .header__box {
+    display: flex;
     margin-top: 100px;
   }
 
