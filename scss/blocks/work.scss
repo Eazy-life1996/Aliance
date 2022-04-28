@@ -121,6 +121,14 @@
   font-size: 14px;
   line-height: 160%;
   color: $blue;
+  
+  &:hover {
+    color: $blue-dark;
+  }
+
+  &:hover .work__button-decoration {
+    background-color: $blue-dark;
+  }
 }
 
 @media (min-width: $desktop-width) {
