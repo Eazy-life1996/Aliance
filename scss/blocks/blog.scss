@@ -1,0 +1,29 @@
+.blog {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 100px;
+}
+
+.blog__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 120%;
+  color: $grey-second;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.blog__decoration {
+  display: inline-block;
+  width: 29.6%;
+  height: 3px;
+  background-color: $blue;
+  margin-bottom: 20px;
+}
+
+.blog__desktop {
+  display: none;
+}
