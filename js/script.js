@@ -47,3 +47,20 @@ $(document).ready(function () {
       ]
   });
 });
+$(document).ready(function () {
+  $('.blog__slider').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }]
+  });
+});
