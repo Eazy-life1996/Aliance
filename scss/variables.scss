@@ -10,3 +10,16 @@ $black: #000000;
 $blue-light:  #F0F2F5;
 
 $desktop-width: 1024px;
+
+%styles-page-description {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $blue-light;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+}

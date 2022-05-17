@@ -29,7 +29,7 @@
 }
 
 .active-close {
-  margin-left: 33%;
+  margin: 0 auto;
   display: block;
 }
 
@@ -213,6 +213,32 @@
   padding-top: 23px;
 }
 
+// Хэдер для других страниц здесь начало для мобильных
+
+.header-other-page {
+  background: none;
+  background-color: $white;
+}
+
+.header-other-page .header__path {
+  fill: $black;
+}
+
+.header-other-page .header__logo:hover .header__path {
+  fill: $blue;
+}
+
+.header-other-page .open path {
+  fill: $grey-second;
+}
+
+.header-other-page .header__btn-burger,
+.header-other-page .header__logo {
+  border-color: $border-second;
+}
+
+// Хэдер для других страниц здесь конец для мобильных
+
 // Вторая часть хэдера
 
 .header__block-second {
@@ -373,10 +399,6 @@
     text-decoration: underline;
   }
 
-  .header__item-show:hover {
-    border-bottom: 2px solid $blue;
-  }
-
   .header__item-show:hover .header__inner-list {
     display: block;
     background-color: $white;
@@ -386,7 +408,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     position: absolute;
-    top: 76px;
+    top: 73px;
   }
 
   .header__list {
@@ -468,6 +490,7 @@
   .header__title {
     margin-top: 0;
     font-size: 80px;
+    text-transform: uppercase;
   }
 
   .header__description {
@@ -489,6 +512,32 @@
     border-right: none;
     &:last-child {
       border-right: 1px solid $border;
+    }
+  }
+
+  // Ниже хэдер для остальных страниц для ПК
+
+  .header-other-page {
+    background: none;
+    background-color: $white;
+  }
+
+  .header-other-page .header__link,
+  .header-other-page .header__item {
+    color: $grey-second;
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .header-other-page .header__block {
+    border-bottom: 1px solid $border-second;
+  }
+
+  .header-other-page .header__phone-desktop {
+    color: $grey-second;
+    &:hover {
+      color: $blue;
     }
   }
 }
