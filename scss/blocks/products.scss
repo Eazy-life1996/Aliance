@@ -5,23 +5,11 @@
 }
 
 .products__title {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 120%;
-  color: $grey-second;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
+  @extend %styles-title;
 }
 
 .products__decoration {
-  display: inline-block;
-  width: 29.6%;
-  height: 3px;
-  background-color: $blue;
-  margin-bottom: 20px;
+  @extend %styles-decoration;
 }
 
 .products__item {
@@ -83,12 +71,8 @@
     display: flex;
   }
 
-  .products__decoration {
-    width: 150px;
-  }
-
   .products__title {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 38px;
   }
 

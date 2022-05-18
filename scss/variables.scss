@@ -23,3 +23,29 @@ $desktop-width: 1024px;
     padding-right: 12.5%;
   }
 }
+%styles-decoration {
+  display: inline-block;
+  width: 29.6%;
+  height: 2px;
+  background-color: $blue;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+}
+%styles-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 120%;
+  color: $grey-second;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  @media (min-width: $desktop-width) {
+    font-size: 60px;
+  }
+}

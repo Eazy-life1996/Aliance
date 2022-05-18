@@ -1,0 +1,144 @@
+.preview {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.preview__img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.preview__title {
+  @extend %styles-title;
+}
+
+.preview__decoration {
+  @extend %styles-decoration;
+}
+
+.preview__description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: $grey;
+  padding-right: 10px;
+  margin-bottom: 50px;
+}
+
+.preview__box {
+  position: relative;
+}
+
+.preview__box-item {
+  width: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid $border-second;
+  border-right: none;
+  border-bottom: none;
+
+  &:last-child {
+    border-right: 1px solid $border-second;
+  }
+}
+
+.preview__p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: $grey-second;
+  margin-top: 15px;
+}
+
+.preview .slick-arrow {
+  position: absolute;
+  background-repeat: no-repeat;
+  font-size: 0;
+  top: 110%;
+  width: 36px;
+  height: 24px;
+  z-index: 5;
+}
+
+.preview .slick-prev {
+  background-image: url(../image/dark-prev.svg);
+  left: 20%;
+}
+
+.preview .slick-next {
+  background-image: url(../image/dark-next.svg);
+  right: 20%;
+}
+
+.preview__decor {
+  position: absolute;
+  left: 0;
+  border: 1px solid $border-second;
+  width: 50%;
+  height: 40px;
+  z-index: -5;
+}
+
+.preview__decor-second {
+  position: absolute;
+  border: 1px solid $border-second;
+  border-left: none;
+  width: 50%;
+  height: 40px;
+  z-index: -5;
+  right: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .preview {
+    padding-right: 12.5%;
+    padding-left: 12.5%;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .preview__description {
+    font-size: 16px;
+    padding-right: 0;
+  }
+
+  .preview__p {
+    font-size: 16px;
+  }
+
+  .preview__box {
+    display: flex;
+    width: 100%;
+  }
+
+  .preview__img {
+    width: 33%;
+  }
+
+  .preview__block {
+    width: 58%;
+  }
+
+  .preview__box-item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 16px;
+    width: 100%;
+    border-bottom: 1px solid $border-second;
+  }
+
+  .preview__decor,
+  .preview__decor-second {
+    display: none;
+  }
+}

@@ -6,23 +6,11 @@
 }
 
 .work__title {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 120%;
-  color: $grey-second;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
+  @extend %styles-title;
 }
 
 .work__decoration {
-  display: inline-block;
-  width: 29.6%;
-  height: 3px;
-  background-color: $blue;
-  margin-bottom: 20px;
+  @extend %styles-decoration;
 }
 
 .work__list {
@@ -140,13 +128,7 @@
   }
 
   .work__title {
-    font-size: 60px;
     margin-bottom: 50px;
-  }
-
-  .work__decoration {
-    margin-bottom: 30px;
-    width: 150px;
   }
 
   .work__list {

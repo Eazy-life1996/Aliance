@@ -15,7 +15,7 @@ menuBtn.addEventListener("click", function () {
 });
 
 $(document).ready(function () {
-  $('.header__box').slick({
+  $('.header__box, .preview__box').slick({
     mobileFirst: true,
     dots: false,
     arrows: true,
@@ -60,6 +60,29 @@ $(document).ready(function () {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2
+      }
+    }]
+  });
+});
+$(document).ready(function () {
+  $('.centre__slider').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: false,
+    centerMode: true,
+    initialSlide: 1,
+    slidesToShow: 1,
+    centerPadding: '10px',
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerPadding: '200px',
+        centerMode: true,
+        initialSlide: 2
       }
     }]
   });

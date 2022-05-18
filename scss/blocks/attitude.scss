@@ -13,23 +13,11 @@
 }
 
 .attitude__title {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 120%;
-  color: $grey-second;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
+  @extend %styles-title;
 }
 
 .attitude__decoration {
-  display: inline-block;
-  width: 29.6%;
-  height: 3px;
-  background-color: $blue;
-  margin-bottom: 20px;
+  @extend %styles-decoration;
 }
 
 .attitude__p {
@@ -76,15 +64,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-  }
-
-  .attitude__title {
-    font-size: 55px;
-  }
-
-  .attitude__decoration {
-    width: 150px;
-    margin-bottom: 30px;
   }
 
   .attitude__p {
