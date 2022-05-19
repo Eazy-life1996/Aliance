@@ -1,0 +1,65 @@
+.potencial {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 50px;
+}
+
+.potencial__title {
+  @extend %styles-title;
+}
+
+.potencial__decoration {
+  @extend %styles-decoration;
+}
+
+.potencial__p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: $grey;
+}
+
+.potencial__link {
+  display: flex;
+  align-items: center;
+  color: $blue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  margin-top: 20px;
+  width: 186px;
+}
+
+.potencial__link:hover .potencial__img {
+  animation-duration: 0.5s;
+  animation-name: rotate;
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.potencial__img {
+  margin-right: 10px;
+}
+
+@media (min-width: $desktop-width) {
+  .potencial {
+    padding-right: 12.5%;
+    padding-left: 12.5%;
+    padding-bottom: 150px;
+  }
+
+  .potencial__p,
+  .potencial__link {
+    font-size: 17px;
+  }
+}

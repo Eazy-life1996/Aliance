@@ -104,12 +104,16 @@
 @media (min-width: $desktop-width) {
   .form {
     padding-right: 12.5%;
+    padding-left: 12.5%;
     padding-bottom: 120px;
     padding-top: 100px;
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
     position: relative;
+    @media (min-width: 1600px) {
+      padding-left: 0;
+    }
   }
 
   .form__title {
@@ -125,16 +129,23 @@
   .form__desktop {
     display: block;
     width: 40%;
+    @media (max-width: 1600px) {
+      display: none;
+    }
   }
 
   .form__img {
     position: absolute;
     bottom: 0;
-    width: 36%;
+    width: 730px;
   }
 
   .form__block {
     width: 50%;
+    @media (max-width: 1600px) {
+      margin: 0 auto;
+      width: 80%;
+    }
   }
 
   .form__form {

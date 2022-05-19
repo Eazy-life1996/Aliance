@@ -80,8 +80,8 @@ $(document).ready(function () {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        centerPadding: '200px',
         centerMode: true,
+        centerPadding: '12.2%',
         initialSlide: 2
       }
     }]
