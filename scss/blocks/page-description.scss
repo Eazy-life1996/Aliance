@@ -13,6 +13,7 @@
 .page-description__location {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .page-description__decor {
@@ -41,9 +42,27 @@
   color: $grey-second;
 }
 
+.page-description__img {
+  display: none;
+}
+
 @media (min-width: $desktop-width) {
+  .page-description {
+    position: relative;
+  }
+
   .page-description__title {
     font-size: 80px;
+  }
+
+  .page-description__img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 12%;
+    @media (max-width: 1530px) {
+      display: none;
+    }
   }
 
   .page-description__p,

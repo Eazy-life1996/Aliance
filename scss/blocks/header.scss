@@ -3,6 +3,7 @@
   background-image: url(../image/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 100px;
 }
 
 .header__desktop {
@@ -218,6 +219,7 @@
 .header-other-page {
   background: none;
   background-color: $background;
+  margin-bottom: 0;
 }
 
 .header-other-page .header__path {
@@ -400,6 +402,7 @@
     padding-bottom: 20px;
     position: absolute;
     top: 73px;
+    z-index: 20;
   }
 
   .header__list {
