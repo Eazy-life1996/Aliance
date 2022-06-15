@@ -15,6 +15,9 @@
 
 .news__link {
   position: relative;
+  &:hover {
+    box-shadow: 0 0 17px $grey-second;
+  }
 }
 
 .news__img {
