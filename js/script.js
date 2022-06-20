@@ -1,5 +1,7 @@
 "use strict";
 
+// Раскрытие меню
+
 let menuBtn = document.querySelector(".header__btn-burger");
 let menuLogo = document.querySelector(".header__logo");
 let menu = document.querySelector(".header__nav");
@@ -14,6 +16,48 @@ menuBtn.addEventListener("click", function () {
   menuLogo.classList.toggle("active-logo");
 });
 
+// Модальное окно
+
+const modal = document.querySelector('.modal');
+const btnOpenModal = document.querySelector('[data-btn-modal]');
+const btnCloseModal = document.querySelector('[data-modal-close]');
+
+function open() {
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  clearInterval(timerForModal);
+}
+
+function close() {
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+btnOpenModal.addEventListener('click', () => {
+  open();
+});
+
+function closeModal() {
+  btnCloseModal.addEventListener('click', close);
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      close();
+    }
+  });
+
+  window.addEventListener('keydown', e => {
+    if (e.keyCode === 27 && modal.style.display === 'block') {
+      close();
+    }
+  });
+}
+
+closeModal();
+const timerForModal = setTimeout(open, 3000);
+
+// Настройка слайдеров
+
 $(document).ready(function () {
   $('.header__box, .preview__box').slick({
     mobileFirst: true,
@@ -22,12 +66,10 @@ $(document).ready(function () {
     infinite: false,
     slidesToShow: 1.5,
     slidesToScroll: 1,
-    responsive: [
-        {
+    responsive: [{
           breakpoint: 768,
           settings: "unslick"
-        }
-      ]
+    }]
   });
 });
 
@@ -39,12 +81,10 @@ $(document).ready(function () {
     infinite: false,
     slidesToShow: 1.2,
     slidesToScroll: 1,
-    responsive: [
-        {
+    responsive: [{
           breakpoint: 768,
           settings: "unslick"
-        }
-      ]
+    }]
   });
 });
 $(document).ready(function () {
