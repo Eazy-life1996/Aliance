@@ -1,148 +1,92 @@
 "use strict";
 
-// Раскрытие меню
+window.addEventListener('DOMContentLoaded', function () {
 
-let menuBtn = document.querySelector(".header__btn-burger");
-let menuLogo = document.querySelector(".header__logo");
-let menu = document.querySelector(".header__nav");
-let btnSvgOpen = document.querySelector(".open");
-let btnSvgClose = document.querySelector(".close");
+  // Раскрытие меню
 
-menuBtn.addEventListener("click", function () {
-  menu.classList.toggle("active");
-  btnSvgOpen.classList.toggle("active-open");
-  btnSvgClose.classList.toggle("active-close");
-  menuBtn.classList.toggle("active-btn");
-  menuLogo.classList.toggle("active-logo");
-});
+  let menuBtn = document.querySelector(".header__btn-burger");
+  let menuLogo = document.querySelector(".header__logo");
+  let menu = document.querySelector(".header__nav");
+  let btnSvgOpen = document.querySelector(".open");
+  let btnSvgClose = document.querySelector(".close");
 
-// Модальное окно
+  menuBtn.addEventListener("click", function () {
+    menu.classList.toggle("active");
+    btnSvgOpen.classList.toggle("active-open");
+    btnSvgClose.classList.toggle("active-close");
+    menuBtn.classList.toggle("active-btn");
+    menuLogo.classList.toggle("active-logo");
+  });
 
-const modal = document.querySelector('[data-modal]');
-const modalSuccess = document.querySelector('[data-modal-success]');
-const btnOpenModal = document.querySelector('[data-btn-modal]');
-const btnCloseModal = document.querySelectorAll('[data-modal-close]');
+  // Настройка слайдеров
 
-function open(someModal) {
-  someModal.style.display = 'block';
-  document.body.style.overflow = 'hidden';
-  clearInterval(timerForModal);
-}
-
-function close(someModal) {
-  someModal.style.display = 'none';
-  document.body.style.overflow = '';
-}
-
-function closeAllModals() {
-  close(modal);
-  close(modalSuccess);
-}
-
-btnOpenModal.addEventListener('click', () => {
-  open(modal);
-});
-
-function closeModal(someModal) {
-  btnCloseModal.forEach(item => {
-    item.addEventListener('click', () => {
-      closeAllModals();
+  $(document).ready(function () {
+    $('.header__box, .preview__box').slick({
+      mobileFirst: true,
+      dots: false,
+      arrows: true,
+      infinite: false,
+      slidesToShow: 1.5,
+      slidesToScroll: 1,
+      responsive: [{
+        breakpoint: 768,
+        settings: "unslick"
+      }]
     });
   });
 
-  someModal.addEventListener('click', e => {
-    if (e.target === someModal) {
-      closeAllModals();
-    }
+  $(document).ready(function () {
+    $('.work__list').slick({
+      mobileFirst: true,
+      dots: false,
+      arrows: true,
+      infinite: false,
+      slidesToShow: 1.2,
+      slidesToScroll: 1,
+      responsive: [{
+        breakpoint: 768,
+        settings: "unslick"
+      }]
+    });
   });
-
-  window.addEventListener('keydown', e => {
-    if (e.keyCode === 27 && someModal.style.display === 'block') {
-      closeAllModals();
-    }
+  $(document).ready(function () {
+    $('.blog__slider').slick({
+      mobileFirst: true,
+      dots: false,
+      arrows: true,
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }]
+    });
   });
-}
-
-modal.addEventListener('submit', (e) => {
-  e.preventDefault();
-  open(modalSuccess);
-});
-
-closeModal(modal);
-closeModal(modalSuccess);
-
-const timerForModal = setTimeout(function() {
-  open(modal);
-}, 10000);
-
-// Настройка слайдеров
-
-$(document).ready(function () {
-  $('.header__box, .preview__box').slick({
-    mobileFirst: true,
-    dots: false,
-    arrows: true,
-    infinite: false,
-    slidesToShow: 1.5,
-    slidesToScroll: 1,
-    responsive: [{
-      breakpoint: 768,
-      settings: "unslick"
-    }]
-  });
-});
-
-$(document).ready(function () {
-  $('.work__list').slick({
-    mobileFirst: true,
-    dots: false,
-    arrows: true,
-    infinite: false,
-    slidesToShow: 1.2,
-    slidesToScroll: 1,
-    responsive: [{
-      breakpoint: 768,
-      settings: "unslick"
-    }]
-  });
-});
-$(document).ready(function () {
-  $('.blog__slider').slick({
-    mobileFirst: true,
-    dots: false,
-    arrows: true,
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }]
-  });
-});
-$(document).ready(function () {
-  $('.centre__slider').slick({
-    mobileFirst: true,
-    dots: false,
-    arrows: true,
-    infinite: false,
-    centerMode: true,
-    initialSlide: 1,
-    slidesToShow: 1,
-    centerPadding: '10px',
-    slidesToScroll: 1,
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '12.2%',
-        initialSlide: 2
-      }
-    }]
+  $(document).ready(function () {
+    $('.centre__slider').slick({
+      mobileFirst: true,
+      dots: false,
+      arrows: true,
+      infinite: false,
+      centerMode: true,
+      initialSlide: 1,
+      slidesToShow: 1,
+      centerPadding: '10px',
+      slidesToScroll: 1,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '12.2%',
+          initialSlide: 2
+        }
+      }]
+    });
   });
 });
