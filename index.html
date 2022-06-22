@@ -830,7 +830,7 @@
       </div>
     </div>
   </footer>
-  <div class="modal">
+  <div data-modal class="modal">
     <div class="modal__block">
       <div class="modal__block-title">
         <h2 class="modal__title">
@@ -867,6 +867,30 @@
           </p>
         </div>
       </form>
+    </div>
+  </div>
+  <div data-modal-success class="modal">
+    <div class="modal__block-second">
+      <img src="image/modal-thanks.svg" alt="Спасибо за заявку" class="modal__img">
+      <button data-modal-close class="modal__btn-second modal__btn">
+        <svg class="modal__svg" width="40" height="40" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" y="0.5" width="39" height="39" stroke="#EBEBF0" />
+          <path
+            d="M13.7803 13.25L13.25 13.7803L19.3488 19.8792L13.2501 25.9779L13.7804 26.5083L19.8792 20.4095L25.9779 26.5083L26.5083 25.9779L20.4095 19.8792L26.5084 13.7803L25.978 13.25L19.8792 19.3488L13.7803 13.25Z"
+            fill="#828A99" />
+        </svg>
+      </button>
+      <h2 class="modal__title">
+        Спасибо за заявку!
+      </h2>
+      <p class="modal__p">
+        Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых
+        сложных случаях!
+      </p>
+      <a href="index.html" class="modal__link">
+        Вернуться на главную
+      </a>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

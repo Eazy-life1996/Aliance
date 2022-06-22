@@ -18,43 +18,62 @@ menuBtn.addEventListener("click", function () {
 
 // Модальное окно
 
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('[data-modal]');
+const modalSuccess = document.querySelector('[data-modal-success]');
 const btnOpenModal = document.querySelector('[data-btn-modal]');
-const btnCloseModal = document.querySelector('[data-modal-close]');
+const btnCloseModal = document.querySelectorAll('[data-modal-close]');
 
-function open() {
-  modal.style.display = 'block';
+function open(someModal) {
+  someModal.style.display = 'block';
   document.body.style.overflow = 'hidden';
   clearInterval(timerForModal);
 }
 
-function close() {
-  modal.style.display = 'none';
+function close(someModal) {
+  someModal.style.display = 'none';
   document.body.style.overflow = '';
 }
 
+function closeAllModals() {
+  close(modal);
+  close(modalSuccess);
+}
+
 btnOpenModal.addEventListener('click', () => {
-  open();
+  open(modal);
 });
 
-function closeModal() {
-  btnCloseModal.addEventListener('click', close);
+function closeModal(someModal) {
+  btnCloseModal.forEach(item => {
+    item.addEventListener('click', () => {
+      closeAllModals();
+    });
+  });
 
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
-      close();
+  someModal.addEventListener('click', e => {
+    if (e.target === someModal) {
+      closeAllModals();
     }
   });
 
   window.addEventListener('keydown', e => {
-    if (e.keyCode === 27 && modal.style.display === 'block') {
-      close();
+    if (e.keyCode === 27 && someModal.style.display === 'block') {
+      closeAllModals();
     }
   });
 }
 
-closeModal();
-const timerForModal = setTimeout(open, 3000);
+modal.addEventListener('submit', (e) => {
+  e.preventDefault();
+  open(modalSuccess);
+});
+
+closeModal(modal);
+closeModal(modalSuccess);
+
+const timerForModal = setTimeout(function() {
+  open(modal);
+}, 10000);
 
 // Настройка слайдеров
 
@@ -67,8 +86,8 @@ $(document).ready(function () {
     slidesToShow: 1.5,
     slidesToScroll: 1,
     responsive: [{
-          breakpoint: 768,
-          settings: "unslick"
+      breakpoint: 768,
+      settings: "unslick"
     }]
   });
 });
@@ -82,8 +101,8 @@ $(document).ready(function () {
     slidesToShow: 1.2,
     slidesToScroll: 1,
     responsive: [{
-          breakpoint: 768,
-          settings: "unslick"
+      breakpoint: 768,
+      settings: "unslick"
     }]
   });
 });
