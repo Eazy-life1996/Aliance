@@ -50,6 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   modal.addEventListener('submit', (e) => {
     e.preventDefault();
+    close(modal);
     open(modalSuccess);
   });
 

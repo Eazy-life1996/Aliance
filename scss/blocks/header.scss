@@ -374,7 +374,7 @@
     color: $white;
     margin: 0;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 0.9vw;
 
     &:last-child {
       margin-right: 0;
@@ -431,7 +431,7 @@
     align-items: center;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 0.9vw;
     line-height: 160%;
 
     &:hover {
@@ -446,7 +446,7 @@
     color: $white;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 0.9vw;
     line-height: 160%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -478,13 +478,13 @@
 
   .header__title {
     margin-top: 0;
-    font-size: 80px;
+    font-size: 3.5vw;
     text-transform: uppercase;
   }
 
   .header__description {
     margin-top: 30px;
-    font-size: 16px;
+    font-size: 0.9vw;
     padding-right: 50%;
   }
 
@@ -496,7 +496,7 @@
   .header__box-item {
     padding-top: 40px;
     padding-bottom: 40px;
-    font-size: 16px;
+    font-size: 0.9vw;
     width: 100%;
     border-right: none;
     &:last-child {

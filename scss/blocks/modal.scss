@@ -34,7 +34,7 @@
 .modal__p {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.8vw;
   line-height: 160%;
   color: $grey;
   margin-top: 10px;
@@ -72,7 +72,7 @@
 .modal__link {
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.9vw;
   line-height: 160%;
   color: $white;
   width: 100%;
@@ -94,13 +94,11 @@
 
 @media (min-width: $desktop-width) {
   .modal__block {
-    top: 136px;
+    top: 8%;
+    left: calc(50% - 12%);
     width: 24%;
     margin: 0 auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 2%;
   }
 
   .modal__form {
@@ -116,7 +114,7 @@
 
   .modal__description {
     width: 80%;
-    margin-top: 24px;
+    margin-top: 20px;
   }
 
   .modal__label {
@@ -125,11 +123,11 @@
   }
 
   .modal__p {
-    font-size: 16px;
+    font-size: 0.9vw;
   }
 
   .modal__title {
-    font-size: 40px;
+    font-size: 2.3vw;
   }
 
   .modal__svg {
@@ -140,12 +138,10 @@
   // Вторая модалка
   
   .modal__block-second {
-    top: 136px;
+    top: 10%;
+    left: calc(50% - 12%);
     width: 24%;
     margin: 0 auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 3%;
   }
 }

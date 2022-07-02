@@ -91,7 +91,7 @@
 
 .form__p-description {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.8vw;
   line-height: 160%;
   color: $grey;
   margin-left: 10px;
@@ -117,12 +117,12 @@
   }
 
   .form__title {
-    font-size: 50px;
+    font-size: 3.5vw;
     margin-bottom: 20px;
   }
 
   .form__p {
-    font-size: 16px;
+    font-size: 0.9vw;
     padding-right: 20%;
   }
 
@@ -158,7 +158,7 @@
     width: 48%;
     margin-bottom: 30px;
     margin-left: 1.5%;
-    font-size: 16px;
+    font-size: 0.9vw;
 
     &:first-child {
       margin-left: 0;
